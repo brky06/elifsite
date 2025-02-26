@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Elif'in geliştirdiği projeler ve çalışmalar" />
+  <meta name="keywords" content="projeler, yazılım projeleri, bilgisayar mühendisliği projeleri, elif, yazılım, programlama" />
+  <meta name="author" content="Elif" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Projelerim - Elif Hasgül</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="./src/global.css">
+  <link rel="stylesheet" href="./src/main/main.css">
+  <link rel="stylesheet" href="./src/css/projects.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">Elif Hasgül</a>
+    <div id="navbar-placeholder"></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Projelerim</h1>
+      <p>Geliştirdiğim ve üzerinde çalıştığım projeleri keşfedin.</p>
+    </section>
+    
+    <section class="cards-section">
+      <div class="card">
+        <img src="./images/web.jpg" alt="Kişisel Web Site Projesi" class="project-image" />
+        <h2>Kişisel Web Sitesi</h2>
+        <p>HTML, CSS ve JavaScript kullanarak geliştirdiğim modern ve responsive kişisel web sitesi.</p>
+        <div class="tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+        </div>
+        <a href="#" class="btn">Projeyi İncele</a>
+      </div>
+      
+      <div class="card">
+        <img src="./images/rezerve.jpeg" alt="Rezervasyon Uygulaması" class="project-image" />
+        <h2>Java Uygulaması</h2>
+        <p>Java kullanarak geliştirdiğim kapsamlı bir rezervasyon uygulaması.</p>
+        <div class="tags">
+          <span>Java</span>
+        </div>
+        <a href="#" class="btn">Projeyi İncele</a>
+      </div>
+      
+      <div class="card">
+        <img src="./images/ai.jpeg" alt="Yapay Zeka Projesi" class="project-image" />
+        <h2>Görüntü Sınıflandırma</h2>
+        <p>YOLO kullanarak geliştirdiğim görüntü sınıflandırma yapan bir makine öğrenmesi projesi.</p>
+        <div class="tags">
+          <span>Python</span>
+          <span>Yolo</span>
+          <span>Yapay Zeka</span>
+        </div>
+        <a href="#" class="btn">Projeyi İncele</a>
+      </div>
+    
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  
+  <div class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script src="./src/js/navbar-scroll.js"></script>
+  <script src="./src/js/scroll-to-top.js"></script>
+  <script type="module">
+    const navbarResponse = await fetch('./src/main/navbar.html');
+    document.getElementById('navbar-placeholder').innerHTML = await navbarResponse.text();
+    
+    const footerResponse = await fetch('./src/main/footer.html');
+    document.getElementById('footer-placeholder').innerHTML = await footerResponse.text();
+  </script>
+</body>
+</html>

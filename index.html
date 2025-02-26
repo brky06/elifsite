@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Elif'in kişisel web sayfası - Bilgisayar mühendisliği, yazılım geliştirme ve teknoloji üzerine paylaşımlar." />
+  <meta name="keywords" content="ceng, blog, bilgisayar mühendisi, elif, yazılım, programlama, teknoloji" />
+  <meta name="author" content="Elif" />
+  <meta name="robots" content="index, follow" />
+  <meta name="revisit-after" content="1 days" />
+  <meta name="language" content="Turkish" />
+  <meta name="distribution" content="global" />
+  <meta name="rating" content="general" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Elif Hasgül - Elif'in Teknoloji Dünyası" />
+  <meta property="og:description" content="Bilgisayar mühendisliği ve teknoloji üzerine ilginç içerikler" />
+  <meta property="og:url" content="https://www.elifhasgul.com" />
+  
+  <title>Elif Hasgül - Elif'in Dünyası</title>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="./src/global.css">
+  <link rel="stylesheet" href="./src/main/main.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">Elif Hasgül</a>
+    <div id="navbar-placeholder"></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Elif'in Şirin Dünyasına Hoş Geldiniz</h1>
+      <p>Bilgisayar mühendisliği, yazılım geliştirme ve hayatın içinden ilginç konulara dair düşüncelerim ve paylaşımlarım.</p>
+    </section>
+    
+    <section class="cards-section">
+      <div class="card">
+        <img src="./images/cat.png" alt="Kedi İkonu" class="rounded-image" />
+        <h2>Hakkımda</h2>
+        <p>Bilgisayar mühendisiyim ve yazılım geliştirme konusunda tutkulu çalışıyorum. Web teknolojileri ve yapay zeka alanlarında uzmanlığım var.</p>
+        <a href="hakkimda.html" class="btn">Daha Fazla</a>
+      </div>
+      
+      <div class="card">
+        <img src="./images/projects.jpeg" alt="Kod İkonu" class="rounded-image" />
+        <h2>Projelerim</h2>
+        <p>Açık kaynak projelerde aktif olarak yer alıyor ve kendi projelerimi geliştiriyorum. GitHub'da birçok projem bulunuyor.</p>
+        <a href="projelerim.html" class="btn">Projelere Göz At</a>
+      </div>
+      
+      <div class="card">
+        <img src="./images/iletisim.jpg" alt="İletişim İkonu" class="rounded-image" />
+        <h2>Benimle İletişime Geçin</h2>
+        <p>Benimle iletişime geçmek için e-posta veya sosyal medya hesaplarımı kullanabilirsiniz. </p>
+        <a href="iletisim.html" class="btn">İletişime geç</a>
+      </div>
+    </section>
+    
+    
+    
+    <!-- <section class="newsletter">
+      <h2>Bültenime Abone Ol</h2>
+      <p>Yeni yazılarımdan ve güncellemelerden haberdar olmak için e-posta listeme katılabilirsin.</p>
+      <form>
+        <input type="email" placeholder="E-posta adresin" required>
+        <button type="submit" class="btn">Abone Ol</button>
+      </form>
+    </section>
+  </main> -->
+
+  <div id="footer-placeholder"></div>
+  
+  <div class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script src="./src/js/navbar-scroll.js"></script>
+  <script src="./src/js/scroll-to-top.js"></script>
+  <script type="module">
+    const navbarResponse = await fetch('./src/main/navbar.html');
+    document.getElementById('navbar-placeholder').innerHTML = await navbarResponse.text();
+    
+    const footerResponse = await fetch('./src/main/footer.html');
+    document.getElementById('footer-placeholder').innerHTML = await footerResponse.text();
+  </script>
+</body>
+</html>
